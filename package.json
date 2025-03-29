@@ -779,8 +779,8 @@
 		"@types/handlebars": "4.1.0",
 		"@types/js-yaml": "4.0.9",
 		"@types/lodash.isequal": "4.5.8",
-		"@types/node": "22.13.10",
-		"@types/semver": "7.5.8",
+		"@types/node": "22.13.14",
+		"@types/semver": "7.7.0",
 		"glob": "11.0.1",
 		"ts-loader": "9.5.2"
 	},
