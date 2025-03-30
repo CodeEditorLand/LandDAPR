@@ -1,7 +1,29 @@
 {
 	"name": "@codeeditorland/dapr",
 	"displayName": "Dapr",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Makes it easy to run, debug, and interact with Dapr-enabled applications.",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandDAPR#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandDAPR/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandDAPR.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
+	"type": "module",
 	"main": "./main.js",
 	"scripts": {
 		"build": "webpack --mode production --devtool hidden-source-map",
@@ -9,6 +31,7 @@
 		"ci-build": "npm run lint && npm run build",
 		"ci-package": "npm run ci-build && npm run package-impl",
 		"package-impl": "vsce package",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
 		"unit-test": "npm run build-test && node ./out/test/runUnitTests.js"
 	},
 	"contributes": {
@@ -776,6 +799,7 @@
 		"tree-kill": "1.2.2"
 	},
 	"devDependencies": {
+		"@playform/build": "0.2.1",
 		"@types/handlebars": "4.1.0",
 		"@types/js-yaml": "4.0.9",
 		"@types/lodash.isequal": "4.5.8",
@@ -783,6 +807,9 @@
 		"@types/semver": "7.7.0",
 		"glob": "11.0.1",
 		"ts-loader": "9.5.2"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"icon": "assets/images/extensionIcon.png",
 	"preview": true,
