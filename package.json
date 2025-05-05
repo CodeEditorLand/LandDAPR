@@ -806,7 +806,7 @@
 		"@vscode/test-electron": "^2.3.10",
 		"eslint": "^8.57.0",
 		"glob": "^10.4.1",
-		"mocha": "^10.4.0",
+		"mocha": "^10.8.2",
 		"opentelemetry": "^0.1.0",
 		"terser-webpack-plugin": "^5.3.10",
 		"ts-loader": "^9.5.1",
