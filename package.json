@@ -1,197 +1,197 @@
 {
-	"name": "@codeeditorland/dapr",
+	"name": "vscode-dapr",
 	"displayName": "Dapr",
-	"version": "0.0.1",
-	"private": false,
 	"description": "Makes it easy to run, debug, and interact with Dapr-enabled applications.",
-	"keywords": [
-		"codeeditorland",
-		"land",
-		"playform"
+	"icon": "assets/images/extensionIcon.png",
+	"version": "0.8.1",
+	"preview": true,
+	"publisher": "ms-azuretools",
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"aiKey": "0c6ae279ed8443289764825290e4f9e2-1a736e7c-1324-4338-be46-fc2a58ae4d14-7255",
+	"extensionKind": [
+		"workspace",
+		"ui"
 	],
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandDAPR#readme",
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandDAPR/issues"
+	"engines": {
+		"dapr-cli": ">=1.10",
+		"dapr-runtime": ">=1.10",
+		"vscode": "^1.82.0"
 	},
+	"categories": [
+		"Debuggers",
+		"Programming Languages",
+		"Other"
+	],
+	"keywords": [
+		"container",
+		"dapr",
+		"docker",
+		"kubernetes"
+	],
+	"activationEvents": [
+		"onDebugResolve:dapr",
+		"onTaskType:dapr",
+		"onTaskType:daprd"
+	],
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LandDAPR.git"
+		"url": "https://github.com/microsoft/vscode-dapr"
 	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "Source 🖋️ Open 👐🏻",
-		"email": "Source/Open@Editor.Land",
-		"url": "HTTPS://Editor.Land"
-	},
-	"type": "module",
+	"homepage": "https://github.com/Microsoft/vscode-dapr/blob/main/README.md",
 	"main": "./main.js",
-	"scripts": {
-		"build": "webpack --mode production --devtool hidden-source-map",
-		"build-test": "tsc -p ./",
-		"ci-build": "npm run lint && npm run build",
-		"ci-package": "npm run ci-build && npm run package-impl",
-		"package-impl": "vsce package",
-		"prepublishOnly": "Build 'Source/**/*.ts'",
-		"unit-test": "npm run build-test && node ./out/test/runUnitTests.js"
-	},
 	"contributes": {
 		"commands": [
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.browse",
-				"icon": "$(globe)",
-				"title": "%vscode-dapr.applications.browse.title%"
+				"title": "%vscode-dapr.applications.browse.title%",
+				"category": "Dapr",
+				"icon": "$(globe)"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.debug",
-				"icon": "$(debug-all)",
-				"title": "%vscode-dapr.applications.debug.title%"
+				"title": "%vscode-dapr.applications.debug.title%",
+				"category": "Dapr",
+				"icon": "$(debug-all)"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.invoke-get",
-				"title": "%vscode-dapr.applications.invoke-get.title%"
+				"title": "%vscode-dapr.applications.invoke-get.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.invoke-post",
-				"title": "%vscode-dapr.applications.invoke-post.title%"
+				"title": "%vscode-dapr.applications.invoke-post.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.publish-all-message",
-				"icon": "$(radio-tower)",
-				"title": "%vscode-dapr.applications.publish-all-message.title%"
+				"title": "%vscode-dapr.applications.publish-all-message.title%",
+				"category": "Dapr",
+				"icon": "$(radio-tower)"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.publish-message",
-				"title": "%vscode-dapr.applications.publish-message.title%"
+				"title": "%vscode-dapr.applications.publish-message.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.stop-app",
-				"title": "%vscode-dapr.applications.stop-app.title%"
+				"title": "%vscode-dapr.applications.stop-app.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.view-app-logs",
-				"title": "%vscode-dapr.applications.view-app-logs.title%"
+				"title": "%vscode-dapr.applications.view-app-logs.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.applications.view-dapr-logs",
-				"title": "%vscode-dapr.applications.view-dapr-logs.title%"
+				"title": "%vscode-dapr.applications.view-dapr-logs.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.help.getStarted",
-				"title": "%vscode-dapr.help.getStarted.title%"
+				"title": "%vscode-dapr.help.getStarted.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.help.installDapr",
-				"title": "%vscode-dapr.help.installDapr.title%"
+				"title": "%vscode-dapr.help.installDapr.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.help.readDocumentation",
-				"title": "%vscode-dapr.help.readDocumentation.title%"
+				"title": "%vscode-dapr.help.readDocumentation.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.help.reportIssue",
-				"title": "%vscode-dapr.help.reportIssue.title%"
+				"title": "%vscode-dapr.help.reportIssue.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.help.reviewIssues",
-				"title": "%vscode-dapr.help.reviewIssues.title%"
+				"title": "%vscode-dapr.help.reviewIssues.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.runs.debug",
-				"icon": "$(debug-all)",
-				"title": "%vscode-dapr.runs.debug.title%"
+				"title": "%vscode-dapr.runs.debug.title%",
+				"category": "Dapr",
+				"icon": "$(debug-all)"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.runs.start",
-				"title": "%vscode-dapr.runs.start.title%"
+				"title": "%vscode-dapr.runs.start.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.runs.stop",
-				"icon": "$(stop)",
-				"title": "%vscode-dapr.runs.stop.title%"
+				"title": "%vscode-dapr.runs.stop.title%",
+				"category": "Dapr",
+				"icon": "$(stop)"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.tasks.scaffoldDaprComponents",
-				"title": "%vscode-dapr.tasks.scaffoldDaprComponents.title%"
+				"title": "%vscode-dapr.tasks.scaffoldDaprComponents.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.tasks.scaffoldDaprTasks",
-				"title": "%vscode-dapr.tasks.scaffoldDaprTasks.title%"
+				"title": "%vscode-dapr.tasks.scaffoldDaprTasks.title%",
+				"category": "Dapr"
 			},
 			{
-				"category": "Dapr",
 				"command": "vscode-dapr.tasks.openDaprDashboard",
-				"icon": "$(dashboard)",
-				"title": "%vscode-dapr.tasks.openDaprDashboard.title%"
+				"title": "%vscode-dapr.tasks.openDaprDashboard.title%",
+				"category": "Dapr",
+				"icon": "$(dashboard)"
 			}
 		],
 		"configuration": {
+			"title": "Dapr",
 			"properties": {
 				"dapr.paths.daprPath": {
-					"description": "%vscode-dapr.configuration.paths.daprPath.description%",
-					"type": "string"
+					"type": "string",
+					"description": "%vscode-dapr.configuration.paths.daprPath.description%"
 				},
 				"dapr.paths.daprdPath": {
-					"description": "%vscode-dapr.configuration.paths.daprdPath.description%",
-					"type": "string"
+					"type": "string",
+					"description": "%vscode-dapr.configuration.paths.daprdPath.description%"
 				}
-			},
-			"title": "Dapr"
+			}
 		},
 		"debuggers": [
 			{
+				"type": "dapr",
 				"configurationAttributes": {
 					"launch": {
-						"not": {
-							"required": [
-								"excludeApps",
-								"includeApps"
-							]
-						},
 						"properties": {
 							"excludeApps": {
+								"type": "array",
 								"description": "%vscode-dapr.debuggers.dapr.properties.excludeApps.description%",
 								"items": {
 									"type": "string"
-								},
-								"type": "array"
+								}
 							},
 							"includeApps": {
+								"type": "array",
 								"description": "%vscode-dapr.debuggers.dapr.properties.includeApps.description%",
 								"items": {
 									"type": "string"
-								},
-								"type": "array"
+								}
 							},
 							"runFile": {
-								"description": "%vscode-dapr.debuggers.dapr.properties.runFile.description%",
-								"type": "string"
+								"type": "string",
+								"description": "%vscode-dapr.debuggers.dapr.properties.runFile.description%"
 							}
 						},
-						"required": [
-							"runFile"
-						]
+						"required": ["runFile"],
+						"not": {
+							"required": ["excludeApps", "includeApps"]
+						}
 					}
-				},
-				"type": "dapr"
+				}
 			}
 		],
 		"menus": {
@@ -234,53 +234,53 @@
 			"view/item/context": [
 				{
 					"command": "vscode-dapr.applications.browse",
-					"group": "inline@1",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /browsable/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /browsable/",
+					"group": "inline@1"
 				},
 				{
 					"command": "vscode-dapr.applications.debug",
-					"group": "inline@2",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /attachable/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /attachable/",
+					"group": "inline@2"
 				},
 				{
 					"command": "vscode-dapr.applications.invoke-get",
-					"group": "invoke",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/",
+					"group": "invoke"
 				},
 				{
 					"command": "vscode-dapr.applications.invoke-post",
-					"group": "invoke",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/",
+					"group": "invoke"
 				},
 				{
 					"command": "vscode-dapr.applications.publish-message",
-					"group": "invoke",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/",
+					"group": "invoke"
 				},
 				{
 					"command": "vscode-dapr.applications.stop-app",
-					"group": "stop",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/",
+					"group": "stop"
 				},
 				{
 					"command": "vscode-dapr.applications.view-app-logs",
-					"group": "logs",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /hasLogs/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /hasLogs/",
+					"group": "logs"
 				},
 				{
 					"command": "vscode-dapr.applications.view-dapr-logs",
-					"group": "logs",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /hasLogs/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /application/ && viewItem =~ /hasLogs/",
+					"group": "logs"
 				},
 				{
 					"command": "vscode-dapr.runs.debug",
-					"group": "inline",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /run/ && viewItem =~ /attachable/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /run/ && viewItem =~ /attachable/",
+					"group": "inline"
 				},
 				{
 					"command": "vscode-dapr.runs.stop",
-					"group": "inline",
-					"when": "view == vscode-dapr.views.applications && viewItem =~ /run/ && viewItem =~ /stoppable/"
+					"when": "view == vscode-dapr.views.applications && viewItem =~ /run/ && viewItem =~ /stoppable/",
+					"group": "inline"
 				}
 			],
 			"view/title": [
@@ -298,154 +298,151 @@
 		},
 		"problemMatchers": [
 			{
-				"background": {
-					"beginsPattern": {
-						"regexp": "^.*[sS]tarting Dapr Runtime"
-					},
-					"endsPattern": {
-						"regexp": "^.*(waiting on port|dapr initialized)"
-					}
-				},
+				"name": "dapr",
 				"fileLocation": [
 					"relative",
 					"${workspaceFolder}"
 				],
-				"name": "dapr",
 				"pattern": [
 					{
+						"regexp": ".",
 						"file": 1,
 						"location": 2,
-						"message": 3,
-						"regexp": "."
+						"message": 3
 					}
-				]
+				],
+				"background": {
+					"beginsPattern": { "regexp": "^.*[sS]tarting Dapr Runtime" },
+					"endsPattern": { "regexp": "^.*(waiting on port|dapr initialized)" }
+				}
 			}
 		],
 		"taskDefinitions": [
 			{
+				"type": "dapr",
 				"properties": {
 					"appChannelAddress": {
-						"description": "%vscode-dapr.tasks.dapr.properties.appChannelAddress.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.appChannelAddress.description%"
 					},
 					"appHealthCheckPath": {
-						"description": "%vscode-dapr.tasks.dapr.properties.appHealthCheckPath.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.appHealthCheckPath.description%"
 					},
 					"appHealthProbeInterval": {
-						"default": 0,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.appHealthProbeInterval.description%",
-						"type": "integer"
+						"default": 0
 					},
 					"appHealthProbeTimeout": {
-						"default": 0,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.appHealthProbeTimeout.description%",
-						"type": "integer"
+						"default": 0
 					},
 					"appHealthThreshold": {
-						"default": 0,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.appHealthThreshold.description%",
-						"type": "integer"
+						"default": 0
 					},
 					"appId": {
-						"description": "%vscode-dapr.tasks.dapr.properties.appId.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.appId.description%"
 					},
 					"appMaxConcurrency": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.appMaxConcurrency.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"appPort": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.appPort.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"appProtocol": {
-						"default": "http",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.dapr.properties.appProtocol.description%",
 						"enum": [
 							"http",
 							"grpc"
 						],
-						"type": "string"
+						"default": "http"
 					},
 					"appSsl": {
-						"description": "%vscode-dapr.tasks.dapr.properties.appSsl.description%",
-						"type": "boolean"
+						"type": "boolean",
+						"description": "%vscode-dapr.tasks.dapr.properties.appSsl.description%"
 					},
 					"args": {
+						"type": "array",
+						"description": "%vscode-dapr.tasks.dapr.properties.args.description%",
 						"additionalItems": {
 							"type": "string"
-						},
-						"description": "%vscode-dapr.tasks.dapr.properties.args.description%",
-						"type": "array"
+						}
 					},
 					"command": {
+						"type": "array",
+						"description": "%vscode-dapr.tasks.dapr.properties.command.description%",
 						"additionalItems": {
 							"type": "string"
-						},
-						"description": "%vscode-dapr.tasks.dapr.properties.command.description%",
-						"type": "array"
+						}
 					},
 					"componentsPath": {
-						"description": "%vscode-dapr.tasks.dapr.properties.componentsPath.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.componentsPath.description%"
 					},
 					"config": {
-						"description": "%vscode-dapr.tasks.dapr.properties.config.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.config.description%"
 					},
 					"cwd": {
-						"description": "%vscode-dapr.tasks.dapr.properties.cwd.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.cwd.description%"
 					},
 					"enableApiLogging": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.dapr.properties.enableApiLogging.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"enableHealthCheck": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.dapr.properties.enableHealthCheck.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"enableProfiling": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.dapr.properties.enableProfiling.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"grpcPort": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.grpcPort.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"httpMaxRequestSize": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.httpMaxRequestSize.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"httpPort": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.httpPort.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"httpReadBufferSize": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.httpReadBufferSize.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"internalGrpcPort": {
-						"default": 50001,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.internalGrpcPort.description%",
-						"type": "integer"
+						"default": 50001
 					},
 					"listenAddresses": {
-						"description": "%vscode-dapr.tasks.dapr.properties.listenAddresses.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.listenAddresses.description%"
 					},
 					"logLevel": {
-						"default": "info",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.dapr.properties.logLevel.description%",
 						"enum": [
 							"debug",
@@ -455,198 +452,198 @@
 							"fatal",
 							"panic"
 						],
-						"type": "string"
+						"default": "info"
 					},
 					"metricsPort": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.metricsPort.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"options": {
-						"additionalProperties": true,
+						"type": "object",
 						"description": "%vscode-dapr.tasks.dapr.properties.options.description%",
+						"additionalProperties":true,
 						"properties": {
 							"env": {
-								"description": "%vscode-dapr.tasks.dapr.properties.options.env.description%",
-								"type": "object"
+								"type": "object",
+								"description": "%vscode-dapr.tasks.dapr.properties.options.env.description%"
 							}
-						},
-						"type": "object"
+						}
 					},
 					"placementHostAddress": {
-						"default": "localhost",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.dapr.properties.placementHostAddress.description%",
-						"type": "string"
+						"default": "localhost"
 					},
 					"profilePort": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.dapr.properties.profilePort.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"resourcesPath": {
-						"description": "%vscode-dapr.tasks.dapr.properties.resourcesPath.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.resourcesPath.description%"
 					},
 					"resourcesPaths": {
+						"type": "array",
+						"description": "%vscode-dapr.tasks.dapr.properties.resourcesPaths.description%",
 						"additionalItems": {
 							"type": "string"
-						},
-						"description": "%vscode-dapr.tasks.dapr.properties.resourcesPaths.description%",
-						"type": "array"
+						}
 					},
 					"runFile": {
-						"description": "%vscode-dapr.tasks.dapr.properties.runFile.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.runFile.description%"
 					},
 					"unixDomainSocket": {
-						"description": "%vscode-dapr.tasks.dapr.properties.unixDomainSocket.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.dapr.properties.unixDomainSocket.description%"
 					}
-				},
-				"type": "dapr"
+				}
 			},
 			{
+				"type": "daprd",
 				"properties": {
 					"allowedOrigins": {
-						"default": "*",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.daprd.properties.allowedOrigins.description%",
-						"type": "string"
+						"default": "*"
 					},
 					"appChannelAddress": {
-						"description": "%vscode-dapr.tasks.daprd.properties.appChannelAddress.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.appChannelAddress.description%"
 					},
 					"appHealthCheckPath": {
-						"description": "%vscode-dapr.tasks.daprd.properties.appHealthCheckPath.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.appHealthCheckPath.description%"
 					},
 					"appHealthProbeInterval": {
-						"default": 0,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.appHealthProbeInterval.description%",
-						"type": "integer"
+						"default": 0
 					},
 					"appHealthProbeTimeout": {
-						"default": 0,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.appHealthProbeTimeout.description%",
-						"type": "integer"
+						"default": 0
 					},
 					"appHealthThreshold": {
-						"default": 0,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.appHealthThreshold.description%",
-						"type": "integer"
+						"default": 0
 					},
 					"appId": {
-						"description": "%vscode-dapr.tasks.daprd.properties.appId.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.appId.description%"
 					},
 					"appMaxConcurrency": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.appMaxConcurrency.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"appPort": {
-						"description": "%vscode-dapr.tasks.daprd.properties.appPort.description%",
-						"type": "integer"
+						"type": "integer",
+						"description": "%vscode-dapr.tasks.daprd.properties.appPort.description%"
 					},
 					"appProtocol": {
-						"default": "http",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.daprd.properties.appProtocol.description%",
 						"enum": [
 							"grpc",
 							"http"
 						],
-						"type": "string"
+						"default": "http"
 					},
 					"appSsl": {
-						"default": true,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.daprd.properties.appSsl.description%",
-						"type": "boolean"
+						"default": true
 					},
 					"args": {
+						"type": "array",
+						"description": "%vscode-dapr.tasks.daprd.properties.args.description%",
 						"additionalItems": {
 							"type": "string"
-						},
-						"description": "%vscode-dapr.tasks.daprd.properties.args.description%",
-						"type": "array"
+						}
 					},
 					"componentsPath": {
-						"default": "./components",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.daprd.properties.componentsPath.description%",
-						"type": "string"
+						"default": "./components"
 					},
 					"config": {
-						"description": "%vscode-dapr.tasks.daprd.properties.config.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.config.description%"
 					},
 					"controlPlaneAddress": {
-						"description": "%vscode-dapr.tasks.daprd.properties.controlPlaneAddress.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.controlPlaneAddress.description%"
 					},
 					"enableApiLogging": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.daprd.properties.enableApiLogging.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"enableHealthCheck": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.daprd.properties.enableHealthCheck.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"enableMetrics": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.daprd.properties.enableMetrics.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"enableMtls": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.daprd.properties.enableMtls.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"enableProfiling": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.daprd.properties.enableProfiling.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"grpcPort": {
-						"default": 50001,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.grpcPort.description%",
-						"type": "integer"
+						"default": 50001
 					},
 					"httpMaxRequestSize": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.httpMaxRequestSize.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"httpPort": {
-						"default": 3500,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.httpPort.description%",
-						"type": "integer"
+						"default": 3500
 					},
 					"httpReadBufferSize": {
-						"default": -1,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.httpReadBufferSize.description%",
-						"type": "integer"
+						"default": -1
 					},
 					"internalGrpcPort": {
-						"default": 50001,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.internalGrpcPort.description%",
-						"type": "integer"
+						"default": 50001
 					},
 					"kubeConfig": {
-						"description": "%vscode-dapr.tasks.daprd.properties.kubeConfig.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.kubeConfig.description%"
 					},
 					"listenAddresses": {
-						"description": "%vscode-dapr.tasks.daprd.properties.listenAddresses.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.listenAddresses.description%"
 					},
 					"logAsJson": {
-						"default": false,
+						"type": "boolean",
 						"description": "%vscode-dapr.tasks.daprd.properties.logAsJson.description%",
-						"type": "boolean"
+						"default": false
 					},
 					"logLevel": {
-						"default": "info",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.daprd.properties.logLevel.description%",
 						"enum": [
 							"debug",
@@ -656,82 +653,81 @@
 							"fatal",
 							"panic"
 						],
-						"type": "string"
+						"default": "info"
 					},
 					"metricsPort": {
-						"default": 9090,
+						"type": "number",
 						"description": "%vscode-dapr.tasks.daprd.properties.metricsPort.description%",
-						"type": "number"
+						"default": 9090
 					},
 					"mode": {
-						"default": "standalone",
+						"type": "string",
 						"description": "%vscode-dapr.tasks.daprd.properties.mode.description%",
 						"enum": [
 							"standalone",
 							"kubernetes"
 						],
-						"type": "string"
+						"default": "standalone"
 					},
 					"options": {
-						"additionalProperties": true,
+						"type": "object",
 						"description": "%vscode-dapr.tasks.daprd.properties.options.description%",
+						"additionalProperties":true,
 						"properties": {
 							"env": {
-								"description": "%vscode-dapr.tasks.daprd.properties.options.env.description%",
-								"type": "object"
+								"type": "object",
+								"description": "%vscode-dapr.tasks.daprd.properties.options.env.description%"
 							}
-						},
-						"type": "object"
+						}
 					},
 					"placementHostAddress": {
-						"description": "%vscode-dapr.tasks.daprd.properties.placementHostAddress.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.placementHostAddress.description%"
 					},
 					"profilePort": {
-						"default": 7777,
+						"type": "integer",
 						"description": "%vscode-dapr.tasks.daprd.properties.profilePort.description%",
-						"type": "integer"
+						"default": 7777
 					},
 					"publicPort": {
-						"description": "%vscode-dapr.tasks.daprd.properties.publicPort.description%",
-						"type": "integer"
+						"type": "integer",
+						"description": "%vscode-dapr.tasks.daprd.properties.publicPort.description%"
 					},
 					"resourcesPath": {
-						"description": "%vscode-dapr.tasks.daprd.properties.resourcesPath.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.resourcesPath.description%"
 					},
 					"resourcesPaths": {
+						"type": "array",
+						"description": "%vscode-dapr.tasks.daprd.properties.resourcesPaths.description%",
 						"additionalItems": {
 							"type": "string"
-						},
-						"description": "%vscode-dapr.tasks.daprd.properties.resourcesPaths.description%",
-						"type": "array"
+						}
 					},
 					"sentryAddress": {
-						"description": "%vscode-dapr.tasks.daprd.properties.sentryAddress.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.sentryAddress.description%"
 					},
 					"unixDomainSocket": {
-						"description": "%vscode-dapr.tasks.daprd.properties.unixDomainSocket.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd.properties.unixDomainSocket.description%"
 					}
 				},
 				"required": [
 					"appId"
-				],
-				"type": "daprd"
+				]
 			},
 			{
+				"type": "daprd-down",
 				"properties": {
 					"appId": {
-						"description": "%vscode-dapr.tasks.daprd-down.properties.appId.description%",
-						"type": "string"
+						"type": "string",
+						"description": "%vscode-dapr.tasks.daprd-down.properties.appId.description%"
 					}
 				},
 				"required": [
 					"appId"
-				],
-				"type": "daprd-down"
+				]
 			}
 		],
 		"views": {
@@ -753,26 +749,26 @@
 		"viewsContainers": {
 			"activitybar": [
 				{
-					"icon": "assets/images/dapr.svg",
 					"id": "dapr-explorer",
-					"title": "%vscode-dapr.view-containers.dapr-explorer.title%"
+					"title": "%vscode-dapr.view-containers.dapr-explorer.title%",
+					"icon": "assets/images/dapr.svg"
 				}
 			]
 		},
 		"viewsWelcome": [
 			{
-				"contents": "%vscode-dapr.views.applications.contents.notInitialized%",
 				"view": "vscode-dapr.views.applications",
+				"contents": "%vscode-dapr.views.applications.contents.notInitialized%",
 				"when": "vscode-dapr.views.applications.state == 'notInitialized'"
 			},
 			{
-				"contents": "%vscode-dapr.views.applications.contents.notInstalled%",
 				"view": "vscode-dapr.views.applications",
+				"contents": "%vscode-dapr.views.applications.contents.notInstalled%",
 				"when": "vscode-dapr.views.applications.state == 'notInstalled'"
 			},
 			{
-				"contents": "%vscode-dapr.views.applications.contents.notRunning%",
 				"view": "vscode-dapr.views.applications",
+				"contents": "%vscode-dapr.views.applications.contents.notRunning%",
 				"when": "vscode-dapr.views.applications.state == 'notRunning'"
 			}
 		],
@@ -783,41 +779,59 @@
 			}
 		]
 	},
-	"activationEvents": [
-		"onDebugResolve:dapr",
-		"onTaskType:dapr",
-		"onTaskType:daprd"
-	],
-	"dependencies": {
-		"axios": "1.9.0",
-		"handlebars": "4.7.8",
-		"js-yaml": "4.1.0",
-		"lodash.isequal": "4.5.0",
-		"ps-list": "8.1.1",
-		"rxjs": "7.8.2",
-		"semver": "7.7.1",
-		"tree-kill": "1.2.2"
+	"scripts": {
+		"build": "webpack --mode production --devtool hidden-source-map",
+		"build-test": "tsc -p ./",
+		"lint": "eslint --max-warnings 0 src --ext ts",
+		"watch": "webpack --watch",
+		"package": "npm run build && npm run package-impl",
+		"ci-build": "npm run lint && npm run build",
+		"ci-package": "npm run ci-build && npm run package-impl",
+		"test": "npm run build-test && node ./out/test/runAllTests.js",
+		"unit-test": "npm run build-test && node ./out/test/runUnitTests.js",
+		"package-impl": "vsce package"
 	},
 	"devDependencies": {
-		"@playform/build": "0.2.3",
-		"@types/handlebars": "4.1.0",
-		"@types/js-yaml": "4.0.9",
-		"@types/lodash.isequal": "4.5.8",
-		"@types/node": "22.15.3",
-		"@types/semver": "7.7.0",
-		"glob": "11.0.2",
-		"ts-loader": "9.5.2"
+		"@types/handlebars": "^4.1.0",
+		"@types/js-yaml": "^4.0.9",
+		"@types/lodash.isequal": "^4.5.8",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^18.18.3",
+		"@types/semver": "^7.5.8",
+		"@types/terser-webpack-plugin": "^5.2.0",
+		"@types/vscode": "^1.82.0",
+		"@types/webpack": "^5.28.5",
+		"@typescript-eslint/eslint-plugin": "^7.10.0",
+		"@typescript-eslint/parser": "^7.10.0",
+		"@vscode/test-electron": "^2.3.10",
+		"eslint": "^8.57.0",
+		"glob": "^10.4.1",
+		"mocha": "^10.4.0",
+		"opentelemetry": "^0.1.0",
+		"terser-webpack-plugin": "^5.3.10",
+		"ts-loader": "^9.5.1",
+		"ts-node": "^10.9.2",
+		"tslint": "^6.1.3",
+		"typescript": "^5.4.5",
+		"vsce": "^2.15.0",
+		"vscode-nls-dev": "^4.0.4",
+		"webpack": "^5.91.0",
+		"webpack-cli": "^5.1.4"
 	},
-	"publishConfig": {
-		"access": "public"
+	"dependencies": {
+		"@microsoft/vscode-azext-utils": "^2.1.1",
+		"@opentelemetry/api": "^1.8.0",
+		"@opentelemetry/tracing": "^0.24.0",
+		"axios": "^0.27.2",
+		"handlebars": "^4.7.8",
+		"js-yaml": "^4.1.0",
+		"lodash.isequal": "^4.5.0",
+		"ps-list": "^7.2.0",
+		"rxjs": "^7.8.1",
+		"semver": "^7.6.2",
+		"tree-kill": "^1.2.2",
+		"vscode-nls": "^5.2.0"
 	},
-	"icon": "assets/images/extensionIcon.png",
-	"preview": true,
-	"aiKey": "0c6ae279ed8443289764825290e4f9e2-1a736e7c-1324-4338-be46-fc2a58ae4d14-7255",
-	"extensionKind": [
-		"workspace",
-		"ui"
-	],
 	"overrides": {
 		"uglify-js": "3.13.10",
 		"xml2js": "0.5.0"
